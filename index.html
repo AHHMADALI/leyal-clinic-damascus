@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيادة لويال | Leyal Clinic — الأمير مصطفى الشهابي، دمشق</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        leyal: {
+                            forest: '#2F4838',   /* أخضر زيتوني طبي عميق */
+                            sage: '#4A6B55',     /* أخضر مريمي هادئ */
+                            mint: '#EAF1EC',     /* أخضر ناعم للبطاقات */
+                            ivory: '#FAF8F5',    /* عاجي دافئ مريح للعين */
+                            gold: '#B8924A',     /* ذهبي طبي أنيق */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-content {
+            max-height: 220px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-leyal-ivory text-slate-800 antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-2xl bg-leyal-forest text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-base sm:text-lg text-leyal-forest block leading-tight">عيادة لويال | Leyal Clinic</span>
+                    <span class="text-xs text-stone-500 font-medium">الأمير مصطفى الشهابي — دمشق</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-stone-700">
+                <a href="#home" class="text-leyal-forest font-bold">الرئيسية</a>
+                <a href="#services" class="hover:text-leyal-forest transition">الخدمات والرعاية</a>
+                <a href="#about" class="hover:text-leyal-forest transition">عن العيادة</a>
+                <a href="#faq" class="hover:text-leyal-forest transition">الأسئلة الشائعة</a>
+                <a href="#location" class="hover:text-leyal-forest transition">الموقع والدوام</a>
+            </nav>
+
+            <a href="#booking" class="bg-leyal-forest hover:bg-leyal-sage text-white px-5 py-2.5 rounded-full text-sm font-bold transition shadow-sm flex items-center gap-2">
+                <span>حجز موعد</span>
+                <i class="fa-solid fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-12 pb-16 lg:pt-20 lg:pb-24 px-4 bg-gradient-to-b from-white to-leyal-ivory">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leyal-mint text-leyal-forest text-xs font-bold border border-leyal-forest/15">
+                    <i class="fa-solid fa-location-dot text-leyal-gold"></i>
+                    <span>دمشق – الأمير مصطفى الشهابي | Leyal Clinic للعناية الطبية والتجميلية</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold text-slate-900 leading-[1.22]">
+                    عناية متكاملة بجمالك وصحتك <br class="hidden sm:block">
+                    <span class="text-leyal-forest">في قلب دمشق.</span>
+                </h1>
+
+                <p class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    في عيادة لويال (Leyal Clinic) بمنطقة الأمير مصطفى الشهابي في دمشق، نقدم جلسات العناية المتقدمة، التجميل غير الجراحي، والاستشارات الطبية في أجواء راقية ومواعيد مرنة تمتد حتى ساعات المساء.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#booking" class="bg-leyal-forest hover:bg-leyal-sage text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition shadow-md flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>احجز موعدك عبر واتساب</span>
+                    </a>
+                    <a href="#services" class="px-7 py-3.5 rounded-full font-bold text-sm sm:text-base text-leyal-forest bg-white border border-stone-300 hover:border-leyal-forest transition">
+                        استعراض الخدمات
+                    </a>
+                </div>
+
+                <div class="pt-4 flex flex-wrap items-center gap-6 text-sm text-stone-600 border-t border-stone-200/80">
+                    <div class="flex items-center gap-1.5 font-bold text-slate-900">
+                        <i class="fa-regular fa-clock text-leyal-forest"></i>
+                        <span>مواعيد مسائية مرنة حتى 12:00 ليلاً</span>
+                    </div>
+                    <span class="text-stone-300">|</span>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-virus text-leyal-forest"></i>
+                        <span>تعقيم وخصوصية تامة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5">
+                <div class="relative rounded-3xl overflow-hidden bg-white border border-stone-200/80 p-3 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80" 
+                         alt="عيادة لويال Leyal Clinic في دمشق" 
+                         class="w-full h-[380px] object-cover rounded-2xl">
+
+                    <div class="bg-leyal-ivory rounded-2xl p-4 border border-stone-200/70 mt-3 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-full bg-leyal-mint text-leyal-forest flex items-center justify-center text-lg">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-stone-500">حجز واستفسارات المواعيد</div>
+                                <div class="font-bold text-slate-900 text-sm" dir="ltr">+963 995 388 021</div>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-leyal-mint text-leyal-forest text-xs font-bold">دمشق</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Olive Medical Highlights Bar -->
+    <section class="px-4 mb-16">
+        <div class="max-w-7xl mx-auto bg-leyal-forest rounded-3xl p-8 sm:p-10 text-white shadow-xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+                <div class="bg-leyal-sage rounded-2xl p-6 text-white border border-white/10">
+                    <div class="text-xs uppercase tracking-wider font-bold text-amber-200 mb-1">Leyal Clinic</div>
+                    <div class="text-2xl font-extrabold mb-2">رعاية وعناية</div>
+                    <p class="text-xs leading-relaxed text-stone-100">تقييم فردي دقيق وبرامج عناية مصممة لتمنحك نتائج طبيعية وآمنة.</p>
+                </div>
+
+                <div class="px-4 sm:border-r border-white/15">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-amber-300">مسائي</div>
+                    <div class="font-bold text-sm mt-1">أوقات دوام مرنة</div>
+                    <p class="text-xs text-stone-200/80 mt-1">استقبال حتى الساعة 12:00 ليلاً لتناسب أصحاب الأعمال والالتزامات.</p>
+                </div>
+
+                <div class="px-4 sm:border-r border-white/15">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-amber-300">100%</div>
+                    <div class="font-bold text-sm mt-1">خصوصية وتعقيم</div>
+                    <p class="text-xs text-stone-200/80 mt-1">التزام كامل بمعايير التعقيم والراحة في كل زيارة وجلسة.</p>
+                </div>
+
+                <div class="px-4 sm:border-r border-white/15">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-amber-300">مباشر</div>
+                    <div class="font-bold text-sm mt-1">حجز عبر واتساب</div>
+                    <p class="text-xs text-stone-200/80 mt-1">تأكيد سريع للموعد في الأمير مصطفى الشهابي دون انتظار.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-leyal-gold font-bold text-sm">خدمات العيادة</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">برامج متكاملة للعناية بالبشرة والجمال</h2>
+                <p class="text-stone-600 text-sm sm:text-base mt-3">نحرص في عيادة لويال على تقديم أحدث الإجراءات العلاجية والتجميلية بأسلوب آمن ونتائج متناغمة.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-leyal-ivory rounded-2xl p-7 border border-stone-200/80 hover:border-leyal-forest transition">
+                    <div class="w-12 h-12 rounded-xl bg-leyal-mint text-leyal-forest flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">تنظيف البشرة العميق والهيدرافيشل</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">تنقية المسام بعمق وإزالة الشوائب مع ترطيب مكثف يمنح البشرة نعومة وإشراقة فورية.</p>
+                    <a href="#booking" class="text-leyal-forest font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز جلسة عناية</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="bg-leyal-ivory rounded-2xl p-7 border border-stone-200/80 hover:border-leyal-forest transition">
+                    <div class="w-12 h-12 rounded-xl bg-leyal-mint text-leyal-forest flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">جلسات النضارة والميزوثيرابي</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">تغذية البشرة بالفيتامينات ومضادات الأكسدة لتحفيز الكولاجين واستعادة الحيوية الطبيعية.</p>
+                    <a href="#booking" class="text-leyal-forest font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز جلسة نضارة</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="bg-leyal-ivory rounded-2xl p-7 border border-stone-200/80 hover:border-leyal-forest transition">
+                    <div class="w-12 h-12 rounded-xl bg-leyal-mint text-leyal-forest flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">تقنيات الليزر والعناية المتقدمة</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">جلسات ليزر حديثة وآمنة مصممة وفق نوع البشرة لتحقيق أفضل النتائج بأعلى درجات الراحة.</p>
+                    <a href="#booking" class="text-leyal-forest font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>استفسر عن الجلسات</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="bg-leyal-ivory rounded-2xl p-7 border border-stone-200/80 hover:border-leyal-forest transition">
+                    <div class="w-12 h-12 rounded-xl bg-leyal-mint text-leyal-forest flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">توحيد اللون ومعالجة التصبغات</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">برامج تقشير لطيفة وعلاجات مخصصة لتخفيف التصبغات وآثار الإجهاد وتجديد خلايا البشرة.</p>
+                    <a href="#booking" class="text-leyal-forest font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز تقييم بشرة</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="bg-leyal-ivory rounded-2xl p-7 border border-stone-200/80 hover:border-leyal-forest transition">
+                    <div class="w-12 h-12 rounded-xl bg-leyal-mint text-leyal-forest flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">برامج تقوية الشعر والفروة</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">جلسات عناية وتغذية لبصيلات الشعر للحد من التساقط وتعزيز الكثافة واللمعان الصحي.</p>
+                    <a href="#booking" class="text-leyal-forest font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز استشارة شعر</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="bg-leyal-ivory rounded-2xl p-7 border border-stone-200/80 hover:border-leyal-forest transition">
+                    <div class="w-12 h-12 rounded-xl bg-leyal-mint text-leyal-forest flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">الاستشارات الطبية والمتابعة</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">فحص شامل ووضع خطة عناية متكاملة مع متابعة مستمرة لضمان رضا المراجع وراحته.</p>
+                    <a href="#booking" class="text-leyal-forest font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز موعدك الآن</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & FAQ Section -->
+    <section id="about" class="py-20 px-4 bg-leyal-ivory">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5">
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-2xl bg-leyal-forest text-white flex items-center justify-center text-2xl font-bold">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-extrabold text-slate-900">عيادة لويال | Leyal Clinic</h3>
+                            <p class="text-leyal-forest text-sm font-semibold">الأمير مصطفى الشهابي — دمشق</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        نلتزم في عيادة لويال بتوفير تجربة طبية وتجميلية مريحة في موقع حيوي بدمشق، مع مرونة في المواعيد النهارية والمسائية لتناسب جدولكم اليومي.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <div class="p-3 rounded-xl bg-leyal-ivory text-xs font-semibold text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-leyal-forest"></i>
+                            <span>مواعيد حتى 12 ليلاً</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-leyal-ivory text-xs font-semibold text-stone-700 flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-leyal-forest"></i>
+                            <span>حجز سريع عبر واتساب</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="faq" class="lg:col-span-7 space-y-4">
+                <span class="text-leyal-gold font-bold text-sm">إجابات واضحة</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-6">الأسئلة الشائعة للمراجعين</h2>
+
+                <div class="faq-item active border border-stone-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>ما هي أوقات دوام عيادة لويال في دمشق؟</span>
+                        <i class="fa-solid fa-plus text-leyal-forest faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-stone-600 text-sm leading-relaxed">
+                        <p class="pt-3">السبت والإثنين: من 12:00 ظهراً حتى 7:30 مساءً ومن 9:00 مساءً حتى 12:00 ليلاً. الأحد والثلاثاء والأربعاء والخميس: من 9:00 مساءً حتى 12:00 ليلاً (الجمعة عطلة).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-stone-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>أين تقع عيادة لويال بالتحديد؟</span>
+                        <i class="fa-solid fa-plus text-leyal-forest faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-stone-600 text-sm leading-relaxed">
+                        <p class="pt-3">تقع العيادة في دمشق — منطقة الأمير مصطفى الشهابي، ويمكنك فتح الخريطة التفاعلية أسفل الصفحة للوصول المباشر.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-stone-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>كيف يمكنني حجز موعد مسبق قبل الحضور؟</span>
+                        <i class="fa-solid fa-plus text-leyal-forest faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-stone-600 text-sm leading-relaxed">
+                        <p class="pt-3">يمكنك تعبئة نموذج الحجز في الموقع أو مراسلتنا مباشرة عبر واتساب على الرقم 0995388021 لتأكيد الموعد المناسب لك.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking, Location & Interactive Google Map Section -->
+    <section id="booking" class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto bg-leyal-forest rounded-3xl overflow-hidden shadow-xl grid lg:grid-cols-12">
+
+            <div id="location" class="lg:col-span-5 p-8 sm:p-10 text-white flex flex-col justify-between bg-gradient-to-br from-leyal-forest to-stone-900">
+                <div class="space-y-5">
+                    <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-amber-200 text-xs font-bold">الموقع وساعات العمل</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold leading-snug">احجز موعدك في عيادة لويال</h2>
+
+                    <div class="space-y-3.5 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-amber-300 mt-1"></i>
+                            <div>
+                                <div class="font-bold">العنوان</div>
+                                <div class="text-stone-200/85">الأمير مصطفى الشهابي، دمشق، سوريا</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-regular fa-clock text-amber-300 mt-1"></i>
+                            <div>
+                                <div class="font-bold">ساعات العمل</div>
+                                <div class="text-stone-200/85 leading-relaxed">
+                                    السبت والإثنين: 12:00 ظ – 7:30 م | 9:00 م – 12:00 ص<br>
+                                    الأحد، الثلاثاء – الخميس: 9:00 م – 12:00 ص (الجمعة مغلق)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp text-amber-300 mt-1"></i>
+                            <div>
+                                <div class="font-bold">واتساب وهاتف العيادة</div>
+                                <div class="text-stone-200/85" dir="ltr">+963 995 388 021</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Maps Embed (Al Amir Mustafa Al Shahabi, Damascus) -->
+                    <div class="pt-2">
+                        <div class="rounded-2xl overflow-hidden border border-white/15 shadow-lg bg-stone-800/50">
+                            <iframe 
+                                title="موقع عيادة لويال Leyal Clinic - الأمير مصطفى الشهابي، دمشق"
+                                src="https://maps.google.com/maps?q=Leyal%20clinic%20%D8%A7%D9%84%D8%A3%D9%85%D9%8A%D8%B1%20%D9%85%D8%B5%D8%B7%D9%81%D9%89%20%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%A8%D9%8A%20%D8%AF%D9%85%D8%B4%D9%82&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                                class="w-full h-44 border-0" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Leyal+clinic+الأمير+مصطفى+الشهابي+دمشق" target="_blank" rel="noopener noreferrer" class="mt-2.5 inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 hover:text-white transition">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                            <span>فتح الموقع في تطبيق خرائط جوجل للملاحة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pt-5 mt-5 border-t border-white/15 text-xs text-stone-300/80">
+                    * يُنصح بالحجز المسبق عبر واتساب لتأكيد الموعد المناسب.
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 p-8 sm:p-12 bg-leyal-ivory flex flex-col justify-center">
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-2">نموذج حجز موعد</h3>
+                <p class="text-stone-500 text-sm mb-6">سيتم فتح محادثة واتساب جاهزة ببياناتك لإرسالها إلى العيادة بضغطة واحدة.</p>
+
+                <form id="clinicBookingForm" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">الاسم الكامل *</label>
+                            <input type="text" id="pName" required placeholder="أدخل اسمك الكريم" class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:border-leyal-forest focus:ring-2 focus:ring-leyal-mint outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1.5">الخدمة المطلوبة</label>
+                            <select id="pService" class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:border-leyal-forest focus:ring-2 focus:ring-leyal-mint outline-none text-sm">
+                                <option value="تنظيف بشرة عميق / هيدرافيشل">تنظيف بشرة عميق / هيدرافيشل</option>
+                                <option value="جلسة نضارة وميزوثيرابي">جلسة نضارة وميزوثيرابي</option>
+                                <option value="جلسة ليزر وعناية">جلسة ليزر وعناية</option>
+                                <option value="فحص واستشارة طبية">فحص واستشارة طبية</option>
+                                <option value="برامج تقوية الشعر">برامج تقوية الشعر</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1.5">اليوم والوقت المفضل</label>
+                        <input type="text" id="pTime" placeholder="مثال: يوم الإثنين الساعة 10:00 مساءً" class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:border-leyal-forest focus:ring-2 focus:ring-leyal-mint outline-none text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1.5">ملاحظات إضافية (اختياري)</label>
+                        <textarea id="pNotes" rows="3" placeholder="اذكر أي استفسار أو حالة خاصة..." class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:border-leyal-forest focus:ring-2 focus:ring-leyal-mint outline-none text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-leyal-forest hover:bg-leyal-sage text-white font-bold py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2 text-sm sm:text-base">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>إرسال طلب الحجز عبر واتساب</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-leyal-ivory border-t border-stone-200/80 py-8 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-stone-500">
+            <div class="font-bold text-stone-700">عيادة لويال | Leyal Clinic — الأمير مصطفى الشهابي، دمشق</div>
+            <div>دمشق، سوريا | جميع الحقوق محفوظة © 2026</div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        document.getElementById('clinicBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('pName').value.trim();
+            const service = document.getElementById('pService').value;
+            const time = document.getElementById('pTime').value.trim() || 'أقرب موعد متاح';
+            const notes = document.getElementById('pNotes').value.trim();
+
+            let text = `مرحباً عيادة لويال (Leyal Clinic)، أرغب بحجز موعد:%0A`;
+            text += `• الاسم: ${name}%0A`;
+            text += `• الخدمة: ${service}%0A`;
+            text += `• الموعد المفضل: ${time}`;
+            if (notes) {
+                text += `%0A• ملاحظات: ${notes}`;
+            }
+
+            window.open(`https://wa.me/963995388021?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>
